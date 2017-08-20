@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'whitefly',
   packages = ['whitefly'],
-  version = '0.0.1',
+  version = '0.0.2',
   description = 'Making the database migrations the easiest step on continuous delivery',
   author = 'Mehmet Ali Aydin',
   author_email = 'maaydin@gmail.com',

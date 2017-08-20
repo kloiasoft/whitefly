@@ -1,3 +1,6 @@
+build
 dist
+db
+wf
 *.pyc
 .DS_Store

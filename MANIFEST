@@ -4,4 +4,7 @@ setup.py
 bin/whitefly
 whitefly/__init__.py
 whitefly/cli.py
+whitefly/color.py
+whitefly/init.py
+whitefly/readme.py
 whitefly/release.py
