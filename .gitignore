@@ -4,3 +4,5 @@ db
 wf
 *.pyc
 .DS_Store
+MANIFEST
+.idea/
