@@ -21,6 +21,9 @@ try:
 
     cli = whitefly.cli.CLI()
     cli.execute(sys.argv[argv_start:])
+    sys.exit(0)
+except whitefly.cli.InvalidCommandException as e:
+    sys.exit(1)
 except Exception as e:
     logger.error(e.message, exc_info=debug)
     sys.exit(1)

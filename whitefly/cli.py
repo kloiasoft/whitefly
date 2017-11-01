@@ -1,6 +1,10 @@
 import re
 
 
+class InvalidCommandException(Exception):
+    pass
+
+
 class CLI:
     def __init__(self):
         self.commands = [
@@ -21,11 +25,11 @@ class CLI:
                 klass = self.load(command["module"], command["klass"])
                 kommand = klass()
                 kommand.execute(args)
-                exit(0)
+                return
         klass = self.load('whitefly.commands.help', 'HelpCommand')
         kommand = klass()
         kommand.execute("")
-        exit(1)
+        raise InvalidCommandException()
 
     def load(self, module, klass):
         module = __import__(module, fromlist=[klass])
