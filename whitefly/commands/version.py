@@ -3,5 +3,9 @@ import whitefly.utils.release as release
 
 
 class VersionCommand(command.BaseCommand):
+    @staticmethod
+    def version():
+        return "whitefly version " + release.VERSION + " (" + release.CODENAME + ")"
+
     def execute(self, args):
-        print("whitefly version " + release.VERSION + " (" + release.CODENAME + ")")
+        print(VersionCommand.version())

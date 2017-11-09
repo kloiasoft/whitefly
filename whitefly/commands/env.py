@@ -51,4 +51,3 @@ class AddCommand(command.BaseCommand):
         name = args[0]
         type = args[1]
         validate_workspace()
-
